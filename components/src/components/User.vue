@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button @click="onClickAge">Update Age</button>
+    <button @click="onClickAge">Update Age Event</button>
+    <button @click="ageChangeFn(3)">Update Age CB</button>
     <p>The user is {{age}} years old</p>
     <p>{{ ageDoubled }}</p>
   </div>
@@ -9,7 +10,18 @@
 <script>
 export default {
   name: "User",
-  props: ["age"],
+  props: {
+    age: {
+      type: Number,
+      //required: true,
+      // default: 20
+      validator(value) {
+        // this.onClickAge()
+        return value < 130
+      }
+    },
+    ageChangeFn: Function
+  },
   emits: ['age-change'],
   computed: {
     ageDoubled() {
