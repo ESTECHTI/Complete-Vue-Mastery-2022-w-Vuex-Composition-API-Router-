@@ -35,10 +35,7 @@
               </router-link>
             </li>
             <li>
-              <a
-                class="px-2 text-white"
-                href="#"
-                @click.prevent="userStore.signOut"
+              <a class="px-2 text-white" href="#" @click.prevent="signOut"
                 >Logout</a
               >
             </li>
@@ -64,7 +61,13 @@ export default {
   methods: {
     toggleAuthModal() {
       this.modalStore.isOpen = !this.modalStore.isOpen;
-      console.log(this.modalStore.isOpen);
+    },
+    signOut() {
+      this.userStore.signOut();
+      //console.log(this.$route);
+      if (this.$route.meta.requiresAuth) {
+        this.$router.push({ name: "home" });
+      }
     },
   },
 };
