@@ -9,7 +9,7 @@ import {
   required,
   min,
   max,
-  alpha_spaces as alphaSpaces,
+  alpha_spaces,
   email,
   min_value as minValue,
   max_value as maxValue,
@@ -27,7 +27,7 @@ export default {
     defineRule("tos", required);
     defineRule("min", min);
     defineRule("max", max);
-    defineRule("alphaSpaces", alphaSpaces);
+    defineRule("alpha_spaces", alpha_spaces);
     defineRule("email", email);
     defineRule("minValue", minValue);
     defineRule("maxValue", maxValue);
