@@ -1,5 +1,5 @@
 <template>
- <div>
+ <main>
      <!-- Music Header -->
      <section class="w-full mb-8 py-14 text-center text-white relative">
       <div
@@ -23,7 +23,7 @@
       </div>
     </section>
     <!-- Form -->
-    <section class="container mx-auto mt-6">
+    <section class="container mx-auto mt-6" id="comments">
       <div
         class="bg-white rounded border border-gray-200 relative flex flex-col"
       >
@@ -78,7 +78,7 @@
         </p>
       </li>
     </ul>
- </div>
+ </main>
 </template>
  
 <script>
