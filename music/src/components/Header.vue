@@ -41,6 +41,13 @@
             </li>
           </template>
         </ul>
+        <ul class="ml-auto">
+          <li>
+            <a class="px2 text-white" href="#" @click.prevent="changeLocale">
+              {{ currentLocale }}
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
@@ -57,6 +64,9 @@ export default {
   },
   computed: {
     ...mapStores(useModalStore, userStore),
+    currentLocale() {
+      return this.$i18n.locale === "br" ? "Portuguese" : "English"
+    }
   },
   methods: {
     toggleAuthModal() {
@@ -69,6 +79,9 @@ export default {
         this.$router.push({ name: "home" });
       }
     },
+    changeLocale() {
+      this.$i18n.locale = this.$i18n.locale === "br" ? "en" : "br";
+    }
   },
 };
 </script>

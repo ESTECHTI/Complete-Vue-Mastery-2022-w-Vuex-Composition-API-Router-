@@ -4,5 +4,8 @@
   },
   "song": {
     "commen_count": "{count} comments"
+  },
+  "manage": {
+    "my_songs": "Meus sons"
   }
 }

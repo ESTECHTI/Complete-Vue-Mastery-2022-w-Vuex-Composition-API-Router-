@@ -16,10 +16,10 @@ export default createI18n({
         currency: "USD"
       }
     },
-    ja: {
+    br: {
       currency: {
         style: "currency",
-        currency: "JPY"
+        currency: "BR"
       }
     }
   }
